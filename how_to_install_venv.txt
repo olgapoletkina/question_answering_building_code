@@ -1,48 +1,50 @@
-✅ Инструкция: Как создать и использовать venv в VS Code
-📦 1. Создай виртуальное окружение (venv)
-Открой терминал VS Code (Ctrl + `) и выполни:
+ 1. Create a Virtual Environment (venv)
+Open the terminal in VS Code (Ctrl + backtick ) and run:
 
 python -m venv .venv
+# or, if using a specific version
 py -3.12 -m venv .venv
-Это создаст папку .venv в текущем проекте (в том числе для requirements.txt).
+This will create a .venv folder in your current project directory (including for requirements.txt use).
 
-🔄 2. Активируй окружение
-На Windows:
+🔄 2. Activate the Environment
+On Windows, activate it with:
 
 .\.venv\Scripts\activate
+After activation, you'll see the prefix (.venv) in your terminal — you're now using the correct environment ✅
 
-После активации в терминале появится префикс (.venv) — ты в нужной среде ✅
+Also, upgrade pip:
 
 python -m pip install --upgrade pip
 
-🔁 3. Установи библиотеки
+🔁 3. Install Required Libraries
+Install from file:
 
 pip install -r requirements.txt
-Или по отдельности:
+Or install packages manually:
 
 pip install pandas numpy jupyter chromadb ...
-📘 4. Установи Jupyter + Kernel (один раз)
+
+📘 4. Install Jupyter + Kernel (once)
 
 pip install jupyter ipykernel
 python -m ipykernel install --user --name=venv --display-name "Python (Project)"
-Название "Python (Project)" можешь заменить на "Python (Neufert)" или любое удобное.
+You can replace "Python (Project)" with "Python (Neufert)", "Python (engineering_exam)", or any name you prefer.
 
-python -m ipykernel install --user --name=engineering_exam --display-name "Python (engineering_exam)"
+Check installed kernels:
 
 jupyter kernelspec list
 
+💻 5. Select Kernel in VS Code
+Open your .ipynb notebook.
 
-💻 5. Выбери ядро в VS Code
-Открой .ipynb ноутбук
+In the top-right corner, click the current kernel name.
 
-В правом верхнем углу нажми на текущий kernel
+Choose:
 
-Выбери:
+Python (Project) ✅
+✅ Done!
+You're now working in a clean, isolated environment with all needed libraries. You can:
 
-Python (Project)  ✅
-✅ Готово!
-Теперь ты работаешь в чистом изолированном окружении с нужными библиотеками, которое можно:
-
-переносить
-архивировать
-запускать на других машинах
+Move it between machines
+Archive it
+Reuse it anywhere with the same dependencies
