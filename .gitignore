@@ -1,0 +1,10 @@
+config.py
+.venv/
+__pycache__/
+*qa_*
+
+how_to_install_venv
+
+data/neufert3th-151105105322-lva1-app6892.pdf
+data/*.docx
+data_base/**/*.sqlite3
