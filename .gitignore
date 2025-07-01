@@ -3,7 +3,7 @@ config.py
 __pycache__/
 *qa_*
 
-how_to_install_venv
+how_to_install_venv.txt
 
 data/neufert3th-151105105322-lva1-app6892.pdf
 data/*.docx
